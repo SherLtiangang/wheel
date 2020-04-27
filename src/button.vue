@@ -12,7 +12,7 @@
     export default {
         // props: ['icon','iconPosition'],
         props: {
-            icon: {},
+            icon: {}, 
             iconPosition: {
                 type: String,
                 default: 'left',
