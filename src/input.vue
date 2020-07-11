@@ -8,17 +8,17 @@
       type="text"
     />
     <template v-if="error">
-      <Icon name="setting"></Icon>
-      <span>{{error}}</span>
+      <icon name="error" class="error-icon"></icon>
+      <span class="error-message">{{ error }}</span>
     </template>
   </div>
 </template>
 <script>
-import Icon from "./icon";
+import icon from "./icon";
 export default {
   name: "G-input",
   components: {
-    Icon,
+    icon,
   },
   props: {
     value: {
@@ -48,7 +48,17 @@ $disabled-color: #aaa;
 $red: #f1453d;
 .container {
   font-size: $font-size;
-  display: inline;
+  display: inline-flex;
+  align-items: center;
+  // > * {
+  //   margin-right: 0.5em;
+  //   &:last-child {
+  //     margin-right: 0;
+  //   }
+  // }
+  > :not(:last-child) {
+    margin-right: 0.5em;
+  }
   > input {
     height: $height;
     border: 1px solid $border-color;
@@ -76,6 +86,12 @@ $red: #f1453d;
         box-shadow: inset 0 1px 3px $red;
         outline: none;
       }
+    }
+    .error-icon {
+      fill: $red;
+    }
+    .error-message {
+      color: $red;
     }
   }
 }

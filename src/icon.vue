@@ -11,7 +11,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .g-icon {
-  width: 1em;
+  width: 1em; 
   height: 1em;
 }
 </style>
