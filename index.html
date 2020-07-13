@@ -48,6 +48,11 @@
         <g-input value="王五" readonly></g-input>
       </div>
       <div class="box">
+        <g-input v-model="message" @change="inputChange"></g-input>
+        <g-button @click="message+=1">+1</g-button>
+        {{message}}
+      </div>
+      <div class="box">
         <g-input value="赵六" error="姓名不能少于两个字"></g-input>
       </div>
       <div class="box"></div>
