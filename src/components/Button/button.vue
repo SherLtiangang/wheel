@@ -15,7 +15,6 @@
 <script>
 export default {
   name: "G-group",
-  // props: ['icon','iconPosition'],
   props: {
     icon: {},
     iconPosition: {

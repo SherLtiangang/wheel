@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import Button from './button'
-import Icon from './icon'
-import ButtonGroup from './button-group'
-import Input from './input'
+import Icon from './components/Icon/icon'
+import Button from './components/Button/button'
+import ButtonGroup from './components/Button/button-group'
+import Input from './components/Input/input'
 
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
@@ -20,7 +20,6 @@ new Vue({
     methods: {
         inputChange(e){
             console.log(e.target.value);
-            
         }
     }
 })

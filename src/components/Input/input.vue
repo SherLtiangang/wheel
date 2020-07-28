@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-import icon from "./icon";
+import icon from "../Icon/icon";
 export default {
   name: "G-input",
   components: {

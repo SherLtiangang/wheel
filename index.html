@@ -14,7 +14,6 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       :root {
         --button-height: 32px;
         --font-size: 14px;
@@ -29,49 +28,67 @@
       #app {
         margin: 20px;
       }
-
       body {
         font-size: var(--font-size);
       }
     </style>
     <style>
       .box {
-        margin: 20px;
+        margin: 20px 0;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      <div class="box">
-        <g-input value="张三"></g-input>
-        <g-input value="李四" disabled></g-input>
-        <g-input value="王五" readonly></g-input>
+      <!-- icon -->
+      <div class="icon">
+        <g-icon name="loading"></g-icon>
       </div>
-      <div class="box">
-        <g-input v-model="message" @change="inputChange"></g-input>
-        <g-button @click="message+=1">+1</g-button>
-        {{message}}
-      </div>
-      <div class="box">
-        <g-input value="赵六" error="姓名不能少于两个字"></g-input>
-      </div>
-      <div class="box"></div>
-      <!-- <g-button :loading="loading1" @click="loading1 = !loading1">
-            按钮
+      <!-- button -->
+      <div class="button">
+        <g-button :loading="loading1" @click="loading1 = !loading1">
+          按钮
         </g-button>
-        <g-button :loading="loading2" icon="setting" @click="loading2 = !loading2">
-            按钮
+        <g-button
+          :loading="loading2"
+          icon="setting"
+          @click="loading2 = !loading2"
+        >
+          按钮
         </g-button>
-        <g-button icon="setting" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-            按钮
+        <g-button
+          icon="setting"
+          icon-position="right"
+          :loading="loading3"
+          @click="loading3 = !loading3"
+        >
+          按钮
         </g-button>
         <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group> -->
+          <g-button icon="left">上一页</g-button>
+          <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
+      </div>
+      <!-- input -->
+      <div class="input">
+        <div class="box">
+          <g-input value="张三"></g-input>
+          <g-input value="李四" disabled></g-input>
+          <g-input value="王五" readonly></g-input>
+        </div>
+
+        <div class="box">
+          <g-input v-model="message" @change="inputChange"></g-input>
+          <g-button @click="message+=1">+1</g-button>
+          {{message}}
+        </div>
+        <div class="box">
+          <g-input value="赵六" error="姓名不能少于两个字"></g-input>
+        </div>
+      </div>
+      
     </div>
     <script src="./src/app.js"></script>
     <script src="./src/svg.js"></script>
-    <!-- <script src="//at.alicdn.com/t/font_1288776_98tk8n716yp.js"></script> -->
   </body>
 </html>
